@@ -11,9 +11,10 @@
 
 
 
-// funzione alla pressione del tasto genera
+// salvataggio dello stato genera in una variabile
 var genera = document.getElementById('genera');
 
+// funzione alla pressione del tasto genera
 genera.addEventListener("click", function() {
 
     var nome = document.getElementById('nome').value;
@@ -45,6 +46,7 @@ genera.addEventListener("click", function() {
         sconto = 'Sconto Over 65';
     }
 
+    // approssimazione ad un massimo di due cifre dopo la virgola
     totale = totale.toFixed(2);
 
     // creazione del numero del treno
@@ -64,21 +66,24 @@ genera.addEventListener("click", function() {
     document.getElementById('o-train').innerHTML = trainCode;
     document.getElementById('o-price').innerHTML = totale + '€';
 
-    // display ticket section
+    // mostra sezione biglietto
     document.getElementById("ticket-title").className = "uppercase d-block";
     document.getElementById("ticket").className = "bottom d-block";
 });
 
 
-
+// salvataggio dello stato annulla in una variabile
 var annulla = document.getElementById('annulla');
 
+// funzione alla pressione del tasto annulla
 annulla.addEventListener("click", function() {
+
+    // rimozione dei dati dai campi di input
     document.getElementById('nome').value = '';
     document.getElementById('km').value = '';
     document.getElementById('age').value = 'none';
 
-    // hide ticket section
+    // nascondi sezione del biglietto
     document.getElementById("ticket-title").className = "d-none";
     document.getElementById("ticket").className = "d-none";
 })

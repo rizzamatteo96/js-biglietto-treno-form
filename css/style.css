@@ -51,11 +51,19 @@ section {
 
 section.top {
     border-radius: 10px;
-    box-shadow: 0 0 10px grey;
+    box-shadow: 0 0 10px black;
 }
 
 label {
     display: block;
+    margin-bottom: 10px;
+    color: #b91450;
+}
+
+input, select{
+    border-color: #b91450;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .field {
@@ -63,17 +71,15 @@ label {
     margin: 0 20px;
 }
 
-label {
-    margin-bottom: 10px;
-}
-
 .buttons{
     margin-top: 50px;
 }
 
-.row {
-    height: 150px;
-    background-color: yellow;
+button{
+    margin: 0 20px;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: #b91450;
 }
 
 .bottom h4{
@@ -82,7 +88,6 @@ label {
 
 .col{
     float: left;
-    margin: 0 10px;
     padding: 10px;
     height: 100%;
     width: calc((100% / 5) - 20px);
@@ -90,9 +95,9 @@ label {
 
 .col .top {
     font-weight: bold;
+    margin-bottom: 40px;
 }
 
-#o-nome.col{
-    font-weight: bold;
-    background-color: lightgrey;
+.row .col:first-child{
+    background-color: lightgray;
 }
