@@ -9,48 +9,101 @@
 </head>
 <body>
 
-    <h1>Calcola il prezzo del tuo biglietto</h1>
-
-    <!-- inizio sezione per campi in input -->
-    <section>
-
-        <!-- inizio sezione parte inserimento dati -->
-        <div>
-            <!-- Campo nome -->
-            <label for="nome">Nome Cognome</label>
-            <input type="text" id="nome">
+    <!-- inizio main coantiner -->
+    <div class="main-container">
+        <h1 class="uppercase">Calcola il prezzo del tuo biglietto</h1>
     
-            <!-- Campo km -->
-            <label for="km">Km da percorrere</label>
-            <input type="text" id="km">
+        <!-- inizio sezione per campi in input -->
+        <section class="top">
     
-            <!-- Campo età -->
-            <label for="age">Fascia d'età</label>
-            <select id="age">
-                <option value="minorenne">Minorenne</option>
-                <option value="maggiorenne">Maggiorenne</option>
-                <option value="over65">Over65</option>
-            </select>
-        </div>
-        <!-- fine sezione parte inserimento dati -->
+            <!-- inizio sezione parte inserimento dati -->
+            <div>
+                <!-- Campo nome -->
+                <div class="field">
+                    <label for="nome">Nome Cognome</label>
+                    <input type="text" id="nome">
+                </div>
+        
+                <!-- Campo km -->
+                <div class="field">
+                    <label for="km">Km da percorrere</label>
+                    <input type="text" id="km">
+                </div>
+        
+                <!-- Campo età -->
+                <div class="field">
+                    <label for="age">Fascia d'età</label>
+                    <select id="age">
+                        <option value="minorenne">Minorenne</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="over65">Over65</option>
+                    </select>
+                </div>
+            </div>
+            <!-- fine sezione parte inserimento dati -->
+    
+            <!-- inizio sezione pulsanti -->
+            <div class="buttons">
+                <button id="genera">Genera</button>
+                <button id="annulla">Annulla</button>
+            </div>
+            <!-- fine sezione pulsanti -->
+    
+    
+        </section>
+        <!-- fine sezione per campi in input -->
+    
 
-        <!-- inizio sezione pulsanti -->
-        <div>
-            <button id="genera">Genera</button>
-            <button id="annulla">Annulla</button>
-        </div>
-        <!-- fine sezione pulsanti -->
+        <h2 class="uppercase">Il tuo biglietto</h2>
 
+        <!-- inizio sezione biglietto -->
+        <section class="bottom">
+                <h4 class="uppercase">dettaglio passeggeri</h4>
+                <hr>
 
-    </section>
-    <!-- fine sezione per campi in input -->
+                <!-- inizio contenuto del biglietto -->
+                <div class="row clearfix">
+                    <!-- inizio prima colonna -->
+                    <div id="o-nome" class="col">
+                        Nome passeggero
+                    </div>
+                    <!-- fine prima colonna -->
 
+                    <!-- inizio seconda colonna -->
+                    <div class="col">
+                        <div class="top">Offerta</div>
+                        <div id="o-sconto" class="bottom"></div>
+                    </div>
+                    <!-- fine seconda colonna -->
 
-    <!-- inizio sezione biglietto -->
-    <section>
+                    <!-- inizio terza colonna -->
+                    <div class="col">
+                        <div class="top">Carrozza</div>
+                        <div id="o-trainCar" class="bottom"></div>
+                    </div>
+                    <!-- fine terza colonna -->
 
-    </section>
-    <!-- fine sezione biglietto -->
+                    <!-- inizio quarta colonna -->
+                    <div class="col">
+                        <div class="top">Codice CP</div>
+                        <div id="o-train" class="bottom"></div>
+                    </div>
+                    <!-- fine quarta colonna -->
+
+                    <!-- inizio quinta colonna -->
+                    <div class="col">
+                        <div class="top">Costo biglietto</div>
+                        <div id="o-price" class="bottom"></div>
+                    </div>
+                    <!-- fine quinta colonna -->
+                </div>
+                <!-- fine contenuto del biglietto -->
+
+                <hr>
+        </section>
+        <!-- fine sezione biglietto -->
+    </div>
+    <!-- fine main container -->
 
 
 

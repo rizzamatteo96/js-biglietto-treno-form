@@ -18,10 +18,13 @@ genera.addEventListener("click", function() {
 
     var nome = document.getElementById('nome').value;
     console.log(nome);
+
     var km = parseInt(document.getElementById('km').value);
     console.log(km);
+
     var age = document.getElementById('age').value;
     console.log(age);
+    
     var pricePerKm = 0.21;
 
     // calcolo del prezzo finale prima dell'applicazione degli sconti
