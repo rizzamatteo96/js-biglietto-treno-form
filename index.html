@@ -34,6 +34,7 @@
                 <div class="field">
                     <label for="age">Fascia d'età</label>
                     <select id="age">
+                        <option value="none">-</option>
                         <option value="minorenne">Minorenne</option>
                         <option value="maggiorenne">Maggiorenne</option>
                         <option value="over65">Over65</option>
@@ -54,18 +55,19 @@
         <!-- fine sezione per campi in input -->
     
 
-        <h2 class="uppercase">Il tuo biglietto</h2>
+        <h2 id="ticket-title" class="d-none">Il tuo biglietto</h2>
 
         <!-- inizio sezione biglietto -->
-        <section class="bottom">
+        <section id="ticket" class="d-none">
                 <h4 class="uppercase">dettaglio passeggeri</h4>
                 <hr>
 
                 <!-- inizio contenuto del biglietto -->
                 <div class="row clearfix">
                     <!-- inizio prima colonna -->
-                    <div id="o-nome" class="col">
-                        Nome passeggero
+                    <div  class="col">
+                        <div class="top">Nome passeggero</div>
+                        <div id="o-nome" class="bottom"></div>
                     </div>
                     <!-- fine prima colonna -->
 

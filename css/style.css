@@ -4,18 +4,26 @@
     box-sizing: border-box;
 }
 
-.uppercase { 
-    text-transform: uppercase;
-}
-
 .clearfix::after{
     content: '';
     display: table;
     clear: both;
 }
 
+.uppercase { 
+    text-transform: uppercase;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
 body {
-    background-color: rgb(211, 7, 177);
+    background-color: #b91450;
 }
 
 .main-container {
@@ -42,7 +50,7 @@ section {
 }
 
 section.top {
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 0 10px grey;
 }
 
@@ -55,8 +63,8 @@ label {
     margin: 0 20px;
 }
 
-input {
-    margin-top: 10px;
+label {
+    margin-bottom: 10px;
 }
 
 .buttons{
@@ -75,8 +83,9 @@ input {
 .col{
     float: left;
     margin: 0 10px;
-    height: 100%;
     padding: 10px;
+    height: 100%;
+    width: calc((100% / 5) - 20px);
 }
 
 .col .top {

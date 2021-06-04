@@ -58,12 +58,15 @@ genera.addEventListener("click", function() {
     // console.log(trainCarNum);
 
 
-    document.getElementById('o-nome').innerHTML += nome;
+    document.getElementById('o-nome').innerHTML = nome;
     document.getElementById('o-sconto').innerHTML = sconto;
     document.getElementById('o-trainCar').innerHTML = trainCarNum;
     document.getElementById('o-train').innerHTML = trainCode;
     document.getElementById('o-price').innerHTML = totale + '€';
 
+    // display ticket section
+    document.getElementById("ticket-title").className = "uppercase d-block";
+    document.getElementById("ticket").className = "bottom d-block";
 });
 
 
@@ -71,5 +74,11 @@ genera.addEventListener("click", function() {
 var annulla = document.getElementById('annulla');
 
 annulla.addEventListener("click", function() {
-    
+    document.getElementById('nome').value = '';
+    document.getElementById('km').value = '';
+    document.getElementById('age').value = 'none';
+
+    // hide ticket section
+    document.getElementById("ticket-title").className = "d-none";
+    document.getElementById("ticket").className = "d-none";
 })
