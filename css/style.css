@@ -75,4 +75,15 @@ input {
 .col{
     float: left;
     margin: 0 10px;
+    height: 100%;
+    padding: 10px;
+}
+
+.col .top {
+    font-weight: bold;
+}
+
+#o-nome.col{
+    font-weight: bold;
+    background-color: lightgrey;
 }
