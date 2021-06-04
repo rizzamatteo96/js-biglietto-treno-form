@@ -28,6 +28,7 @@ genera.addEventListener("click", function() {
     var totale = km * pricePerKm;
     console.log(totale);
 
+    // check se necessari sconti a seconda della fascia d'età
     if(age == 'minorenne'){
         totale = totale * 0.8;
         console.log(totale);
@@ -37,4 +38,13 @@ genera.addEventListener("click", function() {
         console.log(totale);
     }
 
+    // creazione del numero del treno
+    // Codice treno (numero casuale tra 90000 e 100000 escluso)
+    var trainCode = Math.floor(Math.random() * 10000) + 90000;
+    console.log(trainCode);
+
+    // creazione del numero della carrozza
+    // Numero carrozza (numero casuale tra 1 e 9 incluso)
+    var trainCarNum = Math.floor(Math.random() * 9) + 1;
+    console.log(trainCarNum);
 });
