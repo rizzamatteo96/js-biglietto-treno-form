@@ -26,49 +26,63 @@ genera.addEventListener("click", function() {
     var age = document.getElementById('age').value;
     // console.log(age);
 
-    var pricePerKm = 0.21;
-
-    // calcolo del prezzo finale prima dell'applicazione degli sconti
-    var totale = km * pricePerKm;
-    var sconto = 'Nessuno sconto';
-    // console.log(totale);
-
-    // check se necessari sconti a seconda della fascia d'età
-    if(age == 'minorenne'){
-        totale = totale * 0.8;
+    // check dei campi se validi
+    if (nome != '' && !isNaN(km) && km != null && km != undefined  && age != 'none') {
+        var pricePerKm = 0.21;
+    
+        // calcolo del prezzo finale prima dell'applicazione degli sconti
+        var totale = km * pricePerKm;
+        var sconto = 'Nessuno sconto';
         // console.log(totale);
-        sconto = 'Sconto Minorenne';
-
+    
+        // check se necessari sconti a seconda della fascia d'età
+        if(age == 'minorenne'){
+            totale = totale * 0.8;
+            // console.log(totale);
+            sconto = 'Sconto Minorenne';
+    
+        }
+        else if(age == 'over65'){
+            totale = totale * 0.6;
+            // console.log(totale);
+            sconto = 'Sconto Over 65';
+        }
+    
+        // approssimazione ad un massimo di due cifre dopo la virgola
+        totale = totale.toFixed(2);
+    
+        // creazione del numero del treno
+        // Codice treno (numero casuale tra 90000 e 100000 escluso)
+        var trainCode = Math.floor(Math.random() * 10000) + 90000;
+        // console.log(trainCode);
+    
+        // creazione del numero della carrozza
+        // Numero carrozza (numero casuale tra 1 e 9 incluso)
+        var trainCarNum = Math.floor(Math.random() * 9) + 1;
+        // console.log(trainCarNum);
+    
+    
+        document.getElementById('o-nome').innerHTML = nome;
+        document.getElementById('o-sconto').innerHTML = sconto;
+        document.getElementById('o-trainCar').innerHTML = trainCarNum;
+        document.getElementById('o-train').innerHTML = trainCode;
+        document.getElementById('o-price').innerHTML = totale + '€';
+    
+        // mostra sezione biglietto
+        document.getElementById("ticket-title").className = "uppercase d-block";
+        document.getElementById("ticket").className = "bottom d-block";
+    } else {
+        if (nome == ''){
+            alert('Inserire un nome valido');
+        }
+        if (isNaN(km) || km == null || km == undefined){
+            alert('Inserire un kilometraggio valido in numero')
+        }
+        if(age == 'none'){
+            alert('Selezionare la fascia d\'età');
+        }
     }
-    else if(age == 'over65'){
-        totale = totale * 0.6;
-        // console.log(totale);
-        sconto = 'Sconto Over 65';
-    }
 
-    // approssimazione ad un massimo di due cifre dopo la virgola
-    totale = totale.toFixed(2);
-
-    // creazione del numero del treno
-    // Codice treno (numero casuale tra 90000 e 100000 escluso)
-    var trainCode = Math.floor(Math.random() * 10000) + 90000;
-    // console.log(trainCode);
-
-    // creazione del numero della carrozza
-    // Numero carrozza (numero casuale tra 1 e 9 incluso)
-    var trainCarNum = Math.floor(Math.random() * 9) + 1;
-    // console.log(trainCarNum);
-
-
-    document.getElementById('o-nome').innerHTML = nome;
-    document.getElementById('o-sconto').innerHTML = sconto;
-    document.getElementById('o-trainCar').innerHTML = trainCarNum;
-    document.getElementById('o-train').innerHTML = trainCode;
-    document.getElementById('o-price').innerHTML = totale + '€';
-
-    // mostra sezione biglietto
-    document.getElementById("ticket-title").className = "uppercase d-block";
-    document.getElementById("ticket").className = "bottom d-block";
 });
 
 
