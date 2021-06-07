@@ -100,4 +100,4 @@ annulla.addEventListener("click", function() {
     // nascondi sezione del biglietto
     document.getElementById("ticket-title").className = "d-none";
     document.getElementById("ticket").className = "d-none";
-})
+});
